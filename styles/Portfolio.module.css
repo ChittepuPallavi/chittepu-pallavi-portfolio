@@ -1,0 +1,499 @@
+/* Portfolio.module.css */
+
+/* ── NAV ─────────────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 5vw;
+  transition: background 0.4s ease, padding 0.3s ease, backdrop-filter 0.4s;
+}
+.navScrolled {
+  background: rgba(5,5,8,0.85);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  padding: 0.8rem 5vw;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.navLogo {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.navLogoAccent {
+  color: #ff8c42;
+  font-size: 1.25rem;
+}
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.navLink {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.78rem;
+  font-family: 'SF Mono', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+.navLink:hover { color: #ff8c42; }
+
+.navBurger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.navBurger span {
+  display: block;
+  width: 22px; height: 1.5px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(5,5,8,0.97);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 99;
+  }
+  .navLinks.navOpen { display: flex; }
+  .navLink { font-size: 1rem; }
+  .navBurger { display: flex; z-index: 101; }
+}
+
+/* ── SECTIONS ────────────────────────────────────────────── */
+.section {
+  width: 100%;
+  padding: 7rem 0 5rem;
+  background: #050505;
+}
+.sectionDark {
+  background: #02020a;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+.sectionEyebrow {
+  font-family: 'SF Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #ff8c42;
+  margin-bottom: 0.6rem;
+}
+.sectionTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 3.5rem;
+}
+.accent { color: #ff8c42; }
+
+/* ── ABOUT ───────────────────────────────────────────────── */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  .aboutGrid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+.aboutText { display: flex; flex-direction: column; gap: 1.1rem; }
+.aboutText p {
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.62);
+  font-weight: 300;
+}
+.aboutText strong { color: #fff; font-weight: 600; }
+
+.aboutRole {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid rgba(255,140,60,0.2);
+  border-radius: 8px;
+  background: rgba(255,140,60,0.05);
+}
+.aboutRoleLabel {
+  font-family: 'SF Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+.typed {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #ffb347;
+  font-family: 'Inter', sans-serif;
+}
+.cursor {
+  display: inline-block;
+  animation: blink 0.9s step-end infinite;
+  color: #ff8c42;
+  margin-left: 1px;
+}
+@keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+
+.aboutStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.stat {
+  display: flex; flex-direction: column;
+  padding: 1.4rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  gap: 0.3rem;
+  transition: border-color 0.25s, background 0.25s;
+}
+.stat:hover {
+  border-color: rgba(255,140,60,0.3);
+  background: rgba(255,140,60,0.04);
+}
+.statNum {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ff8c42;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.statLabel {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.eduCard {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 1.6rem 2rem;
+  border: 1px solid rgba(255,140,60,0.22);
+  border-radius: 14px;
+  background: rgba(255,140,60,0.04);
+}
+.eduIcon { font-size: 2rem; flex-shrink: 0; }
+.eduTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+.eduSub {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  font-family: 'SF Mono', monospace;
+  letter-spacing: 0.06em;
+}
+
+/* ── SKILLS ──────────────────────────────────────────────── */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.8rem;
+}
+.skillGroup {
+  padding: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.25s;
+}
+.skillGroup:hover { border-color: rgba(255,140,60,0.3); }
+.skillCat {
+  font-family: 'SF Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ff8c42;
+  margin-bottom: 1rem;
+}
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.skillTag {
+  font-size: 0.72rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.04);
+  font-family: 'SF Mono', monospace;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+}
+.skillTag:hover { border-color: #ff8c42; color: #ffb347; }
+
+/* ── PROJECTS ────────────────────────────────────────────── */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.6rem;
+}
+.projectCard {
+  position: relative;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+  display: flex; flex-direction: column; gap: 0.8rem;
+  transition: border-color 0.3s, transform 0.3s, background 0.3s;
+}
+.projectCard:hover {
+  border-color: rgba(255,140,60,0.35);
+  background: rgba(255,140,60,0.035);
+  transform: translateY(-3px);
+}
+.projectHighlight {
+  border-color: rgba(255,140,60,0.3) !important;
+  background: rgba(255,100,20,0.06) !important;
+}
+.projectBadge {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  font-size: 0.6rem;
+  font-family: 'SF Mono', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ff8c42;
+  border: 1px solid rgba(255,140,60,0.4);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255,140,60,0.1);
+}
+.projectEmoji { font-size: 1.8rem; line-height: 1; }
+.projectTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.projectDesc {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.65;
+  font-weight: 300;
+}
+.projectTags {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+  margin-top: auto; padding-top: 0.5rem;
+}
+.projectTag {
+  font-size: 0.65rem;
+  font-family: 'SF Mono', monospace;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255,140,60,0.25);
+  color: rgba(255,180,100,0.8);
+  background: rgba(255,140,60,0.07);
+}
+
+/* ── EXPERIENCE ──────────────────────────────────────────── */
+.expCard {
+  padding: 2.5rem;
+  border: 1px solid rgba(255,140,60,0.22);
+  border-radius: 16px;
+  background: rgba(255,140,60,0.03);
+  display: flex; flex-direction: column; gap: 1.4rem;
+}
+.expHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.expRole {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+.expCompany {
+  font-family: 'SF Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #ff8c42;
+  text-transform: uppercase;
+}
+.expBadge {
+  font-size: 0.6rem;
+  font-family: 'SF Mono', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(100,200,100,0.35);
+  color: rgba(100,220,120,0.8);
+  background: rgba(100,200,100,0.07);
+  white-space: nowrap;
+  align-self: flex-start;
+}
+.expDesc {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+}
+.expSkills { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.expProjects { display: flex; flex-direction: column; gap: 0.6rem; }
+.expProjectsLabel {
+  font-family: 'SF Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+.expProjectList { display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; }
+.expProject {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ── ACHIEVEMENTS ────────────────────────────────────────── */
+.achieveGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.3rem;
+  margin-bottom: 4rem;
+}
+.achieveCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.4rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.25s, background 0.25s;
+}
+.achieveCard:hover {
+  border-color: rgba(255,140,60,0.3);
+  background: rgba(255,140,60,0.035);
+}
+.achieveIcon { font-size: 1.5rem; flex-shrink: 0; }
+.achieveText {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.55;
+}
+
+.interestsWrap {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 2.5rem;
+}
+.interestsTitle {
+  font-family: 'SF Mono', monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1rem;
+}
+.interestTags { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.interestTag {
+  font-size: 0.78rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.03);
+  transition: border-color 0.2s, color 0.2s;
+}
+.interestTag:hover { border-color: #ff8c42; color: #ffb347; }
+
+/* ── CONTACT ─────────────────────────────────────────────── */
+.contactSection { text-align: center; }
+.contactSub {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.45);
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+  text-align: left;
+}
+.contactCard {
+  display: flex; flex-direction: column; gap: 0.4rem;
+  padding: 1.4rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.25s;
+}
+.contactCard:hover { border-color: rgba(255,140,60,0.3); }
+.contactIcon { font-size: 1.4rem; }
+.contactLabel {
+  font-family: 'SF Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+.contactVal {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.2s;
+}
+a.contactVal:hover { color: #ff8c42; text-decoration: underline; }
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+.footer {
+  background: #000;
+  text-align: center;
+  padding: 2rem 5vw;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+  font-family: 'SF Mono', monospace;
+  letter-spacing: 0.06em;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}

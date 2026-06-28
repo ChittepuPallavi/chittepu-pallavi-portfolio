@@ -1,0 +1,267 @@
+🎬 Cinematic Portfolio Hero
+
+A premium, cinematic developer portfolio showcasing my projects, technical expertise, and passion for building impactful software solutions. Built with Next.js, Three.js, and GSAP, featuring immersive animations and modern UI inspired by award-winning developer portfolios.
+
+📁 File Structure
+cinematic-portfolio/
+├── app/
+│   ├── layout.jsx
+│   ├── globals.css
+│   └── page.jsx
+├── components/
+│   ├── VideoIntro.jsx
+│   └── CinematicLayer.jsx
+├── styles/
+│   └── VideoIntro.module.css
+├── public/
+│   ├── portfolio.mp4
+│   ├── profile.png
+│   └── resume.pdf
+├── package.json
+└── next.config.js
+Personal Information
+
+Replace your current component with:
+
+<VideoIntro
+  videoSrc="/portfolio.mp4"
+  firstName="Chittepu"
+  lastName="Pallavi"
+  tagline="Software Developer • Java Programmer • AI Enthusiast"
+  role="B.Tech Student passionate about Java Development, Artificial Intelligence, Web Development, Data Structures & Algorithms, and Building Innovative Software Solutions."
+/>
+About Me
+Hi, I'm
+Chittepu Pallavi
+Software Developer | Java Programmer | AI Enthusiast
+
+I am a passionate B.Tech Computer Science student with strong interest in software development, artificial intelligence, full-stack web development, and problem solving.
+
+I enjoy building real-world applications that solve practical problems while continuously improving my programming and development skills.
+
+My goal is to become a highly skilled Software Engineer capable of creating scalable, user-friendly, and intelligent applications.
+
+Education
+Bachelor of Technology (B.Tech)
+
+Computer Science & Engineering
+
+(Expected Graduation: Add Your Year)
+
+Technical Skills
+Languages
+Java
+Python
+C
+JavaScript
+HTML5
+CSS3
+SQL
+Frameworks & Libraries
+React.js
+Next.js
+Node.js
+GSAP
+Three.js
+Database
+MySQL
+Tools
+VS Code
+Git
+GitHub
+Arduino IDE
+Postman
+Concepts
+Object Oriented Programming
+Data Structures
+Algorithms
+DBMS
+Operating Systems
+Computer Networks
+Projects
+🏧 ATM Interface
+
+Java desktop application implementing banking operations.
+
+Features
+
+Login Authentication
+Deposit
+Withdraw
+Balance Inquiry
+Transaction History
+Secure PIN Validation
+
+Technologies
+
+Java
+OOP
+Collections
+File Handling
+💱 Currency Converter
+
+Java application for currency conversion.
+
+Features
+
+Multiple Currency Support
+Real-Time Conversion Logic
+Clean User Interface
+Exception Handling
+
+Technologies
+
+Java
+Swing
+OOP
+🎮 Number Guessing Game
+
+Interactive Java game with scoring system.
+
+Features
+
+Random Number Generation
+Difficulty Levels
+Score Tracking
+Multiple Attempts
+🎓 Student Grade Calculator
+
+Features
+
+Grade Calculation
+Percentage
+GPA
+Result Analysis
+🤖 AI Medical Image Analysis
+
+Current Project
+
+Developing an AI-powered medical imaging platform capable of assisting healthcare professionals through intelligent image analysis.
+
+Technologies
+
+AI
+Deep Learning
+Medical Imaging
+Web Development
+🌐 Personal Portfolio Website
+
+Modern developer portfolio built using
+
+Next.js
+Three.js
+GSAP
+Responsive Design
+Internship Experience
+Java Programming Internship
+
+DecodeLabs
+
+Worked on multiple industry-level Java applications focusing on
+
+Core Java
+Object-Oriented Programming
+Exception Handling
+Collections Framework
+File Handling
+GUI Applications
+Software Development Best Practices
+
+Projects Completed
+
+ATM Interface
+Number Guessing Game
+Student Grade Calculator
+Currency Converter
+Achievements
+Solved Data Structures & Algorithms problems
+Built multiple Java applications
+Developed responsive websites
+Exploring Artificial Intelligence
+Active GitHub Contributor
+Continuous Learner
+Areas of Interest
+Artificial Intelligence
+Software Engineering
+Full Stack Development
+Cloud Computing
+Machine Learning
+UI/UX Design
+Open Source
+Contact
+Name:
+Chittepu Pallavi
+
+Email:
+your-email@gmail.com
+
+GitHub:
+https://github.com/ChittepuPallavi
+
+LinkedIn:
+https://linkedin.com/in/your-profile
+
+Location:
+India
+Color Theme
+:root{
+
+--clr-orange:#ff8c42;
+
+--clr-amber:#ffb347;
+
+--clr-blue:#4a9eff;
+
+--clr-bg:#050505;
+
+--clr-text:#ffffff;
+
+}
+Hero Text
+
+Large Heading
+
+CHITTEPU
+
+PALLAVI
+
+Subtitle
+
+SOFTWARE DEVELOPER
+
+Small Description
+
+Passionate B.Tech Computer Science student focused on building scalable software solutions using Java, AI, Full Stack Development, and Modern Web Technologies.
+Animation Section
+
+Display these highlights one after another:
+
+Java Developer
+
+AI Enthusiast
+
+Competitive Programmer
+
+Problem Solver
+
+Full Stack Learner
+
+Open Source Contributor
+
+Software Engineer Aspirant
+Portfolio Sections
+Home
+
+About
+
+Skills
+
+Projects
+
+Experience
+
+Achievements
+
+Resume
+
+Contact
